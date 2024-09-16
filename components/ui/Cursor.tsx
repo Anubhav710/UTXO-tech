@@ -54,7 +54,7 @@ const Cursor = () => {
     <div
       ref={circle}
       style={{ width: size, height: size }}
-      className="bg-black rounded-full text-white    cursor-default fixed top-0 left-0 pointer-events-none z-10 flex items-center justify-center"
+      className="bg-black rounded-full text-white  hidden   cursor-default fixed top-0 left-0 pointer-events-none z-10 md:flex items-center justify-center"
     >
       <span className="cursor-default  w-1/2">Scroll Down</span>
     </div>
