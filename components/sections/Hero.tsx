@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -5,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { myFont } from "@/fonts";
 import Image from "next/image";
 import { container } from "@/constants";
+import Cursor from "../ui/Cursor";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
@@ -97,8 +99,9 @@ const Hero = () => {
   }, []);
   return (
     <section id="hero" className=" relative ">
+      <Cursor />
       {/* CONATINER  */}
-      <div className=" bg-black  h-screen w-full flex flex-col items-center overflow-hidden relative  scale-[1]      ">
+      <div className=" bg-black  h-svh w-full flex flex-col items-center overflow-hidden relative  scale-[1]      ">
         <div className="absolute inset-0 h-full w-full bg-gradient-to-b from-black/40 to-black/20 z-20"></div>
         {/* ROTATE DIV  */}
         <div id="rotate-div" className="w-[200vw] h-[300vh]   flex gap-4">
@@ -180,7 +183,7 @@ const Hero = () => {
         >
           <h1
             id="overlay-div-h1"
-            className={`text-clamp   font-semibold opacity-0 ${myFont.className} `}
+            className={`text-clamp  cursor-default   font-semibold opacity-0 ${myFont.className} `}
           >
             UTXO Tech
           </h1>

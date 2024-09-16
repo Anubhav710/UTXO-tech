@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Utility classes using Tailwind CSS */
 .rows {
   @apply h-full w-[calc(100%/5)] space-y-7;
 }
@@ -10,8 +12,9 @@
 }
 
 .text-clamp {
-  font-size: -webkit-clamp(50px, 9vw, 800px);
-  font-size: clamp(50px, 9vw, 800px);
+  font-size: -webkit-clamp(50px, 9vw, 800px); /* WebKit for Safari */
+  font-size: -moz-clamp(50px, 9vw, 800px); /* Mozilla for Firefox */
+  font-size: clamp(50px, 9vw, 800px); /* Standard */
 }
 
 .text-clamp-2 {
@@ -19,18 +22,21 @@
 }
 
 .text-clamp-p {
-  font-size: -webkit-clamp(0.2rem, 2vw, 32px);
-  font-size: clamp(0.2rem, 2vw, 32px);
+  font-size: -webkit-clamp(0.2rem, 2vw, 32px); /* WebKit */
+  font-size: -moz-clamp(0.2rem, 2vw, 32px); /* Mozilla */
+  font-size: clamp(0.2rem, 2vw, 32px); /* Standard */
 }
 
 .h-clamp {
-  height: -webkit-clamp(50vh, 100vw, 100vh);
-  height: clamp(50vh, 100vw, 100vh);
+  height: -webkit-clamp(50vh, 100vw, 100vh); /* WebKit */
+  height: -moz-clamp(50vh, 100vw, 100vh); /* Mozilla */
+  height: clamp(50vh, 100vw, 100vh); /* Standard */
 }
 
 .btn-clamp {
-  height: -webkit-clamp(44px, 6vw, 3.2rem);
-  height: clamp(44px, 6vw, 3.2rem);
+  height: -webkit-clamp(44px, 6vw, 3.2rem); /* WebKit */
+  height: -moz-clamp(44px, 6vw, 3.2rem); /* Mozilla */
+  height: clamp(44px, 6vw, 3.2rem); /* Standard */
 }
 
 .s {
@@ -40,19 +46,22 @@
 .nav {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px); /* WebKit */
 }
 
 .s-clamp-h {
-  font-size: -webkit-clamp(2rem, 8vw, 7rem);
-  font-size: clamp(2rem, 8vw, 7rem);
+  font-size: -webkit-clamp(2rem, 8vw, 7rem); /* WebKit */
+  font-size: -moz-clamp(2rem, 8vw, 7rem); /* Mozilla */
+  font-size: clamp(2rem, 8vw, 7rem); /* Standard */
 }
 
 .s-clamp-b {
-  height: -webkit-clamp(2rem, 8vw, 7rem);
-  height: clamp(2rem, 8vw, 7rem);
-  width: -webkit-clamp(2rem, 8vw, 7rem);
-  width: clamp(2rem, 8vw, 7rem);
+  height: -webkit-clamp(2rem, 8vw, 7rem); /* WebKit */
+  height: -moz-clamp(2rem, 8vw, 7rem); /* Mozilla */
+  height: clamp(2rem, 8vw, 7rem); /* Standard */
+  width: -webkit-clamp(2rem, 8vw, 7rem); /* WebKit */
+  width: -moz-clamp(2rem, 8vw, 7rem); /* Mozilla */
+  width: clamp(2rem, 8vw, 7rem); /* Standard */
 }
 
 .rounded-div-wrapper {
@@ -74,16 +83,33 @@
 }
 
 .gallery h1 {
-  font-size: -webkit-clamp(2em, 4vw, 6em);
-  font-size: clamp(2em, 4vw, 6em);
+  font-size: -webkit-clamp(2em, 4vw, 6em); /* WebKit */
+  font-size: -moz-clamp(2em, 4vw, 6em); /* Mozilla */
+  font-size: clamp(2em, 4vw, 6em); /* Standard */
 }
 
 .gallery p {
-  font-size: -webkit-clamp(1.4em, 2.5vw, 5em);
-  font-size: clamp(1.4em, 2.5vw, 5em);
+  font-size: -webkit-clamp(1.4em, 2.5vw, 5em); /* WebKit */
+  font-size: -moz-clamp(1.4em, 2.5vw, 5em); /* Mozilla */
+  font-size: clamp(1.4em, 2.5vw, 5em); /* Standard */
   line-height: 1.4;
 }
 
 .pro-box {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
+}
+
+.ser-text-clamp {
+  font-size: clamp(2rem, 6vw, 8rem);
+  line-height: 100%;
+}
+
+@media (min-width: 768px) {
+  .ser-text-clamp-s {
+    font-size: clamp(2rem, 6vw, 8rem);
+  }
+}
+
+.scroll-down {
+  background-color: rgba(0, 0, 0);
 }

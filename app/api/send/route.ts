@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     // Adding the name, phoneNo, message, and interests to the email body
     const mailOptions = {
       from: email,
-      to: "anubhavagrawal710@gmail.com",
+      to: "utxowebtech.rohit@gmail.com",
       subject: "Enquiry received from UTXO WebTech.",
       html: `
         <div style="font-family: Arial, sans-serif;">

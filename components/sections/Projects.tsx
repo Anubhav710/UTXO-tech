@@ -1,3 +1,4 @@
+"use client";
 import { myFont } from "@/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

@@ -79,6 +79,14 @@ const ContactUs: React.FC = () => {
       toast.error("Ensure that all fields are filled out before submitting. ");
     } finally {
       setLoading(false); // Stop loading
+      // Reset the form and selected indices
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+        mobile: "",
+      });
+      setSelectedIndices([]); // Reset selected interests
     }
   };
 
@@ -148,7 +156,15 @@ const ContactUs: React.FC = () => {
       </div>
 
       <div className="pt-5 mx-auto w-max">
-        <CustomButton onClick={handleSubmit}>
+        <CustomButton
+          disable={loading}
+          onClick={handleSubmit}
+          className={`${
+            loading
+              ? "bg-gray-600 cursor-not-allowed"
+              : "bg-black cursor-pointer"
+          }`}
+        >
           {loading ? "Sending..." : "Send Message"}
         </CustomButton>
         <ToastContainer />

@@ -7,25 +7,28 @@ const CustomButton = ({
   children,
   className,
   onClick,
+  disable,
 }: {
   children: React.ReactNode;
   className?: any;
   onClick: any;
+  disable?: any;
 }) => {
   return (
-    <motion.div
+    <motion.button
       whileHover={"whileHover"}
       className={tw(
         "bg-black text-lg   text-white w-max md:px-6 px-4  md:h-[2.4rem] h-[2.2rem] overflow-hidden   rounded-full cursor-pointer ",
         className
       )}
       onClick={onClick}
+      disabled={disable}
     >
       {/* SLIDER Container */}
       <motion.div
         variants={{
           whileHover: {
-            y: "-100%",
+            y: `${disable ? "0" : "-100%"}`,
           },
         }}
         transition={{
@@ -42,7 +45,7 @@ const CustomButton = ({
           {children}
         </div>
       </motion.div>
-    </motion.div>
+    </motion.button>
   );
 };
 

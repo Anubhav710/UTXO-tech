@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="flex flex-col  md:flex-row items-center gap-4">
             <div className="flex items-center gap-2">
               <FaPhoneAlt className="w-6 h-6" />
-              <Link href={"tel:7002541577"}>+91-7002541577</Link>
+              <Link href={"tel:9266041753"}>+91-9266041753</Link>
             </div>
             <div className="flex items-center gap-2">
               <MdEmail className="w-6 h-6" />
@@ -28,36 +28,43 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div>
-            <ul className="flex items-center gap-4">
-              <li className="text-2xl">
-                <Link
-                  href={"https://www.instagram.com/utxotech/"}
-                  target="_blank"
-                >
-                  <AiFillInstagram className="h-full w-full transition-colors duration-500 hover:text-[#E85868]" />
-                </Link>
-              </li>
-              <li className="text-2xl">
-                <Link
-                  href={"https://www.facebook.com/utxotech/"}
-                  target="_blank"
-                >
-                  <FaFacebookF className="w-full h-full transition-colors duration-500 hover:text-blue-600" />
-                </Link>
-              </li>
-              <li className="text-2xl">
-                <Link href={"https://x.com/utxotech"} target="_blank">
-                  <FaXTwitter className="h-full w-full transition-colors duration-500 hover:text-[#1DA1F2]" />
-                </Link>
-              </li>
-              <li className="text-2xl">
-                <Link
-                  href={"https://in.linkedin.com/company/utxotech"}
-                  target="_blank"
-                >
-                  <FaLinkedinIn className="h-full w-full transition-colors duration-500 hover:text-[#0077B5]" />
-                </Link>
-              </li>
+            <ul className="flex items-center gap-4 ">
+              <Link
+                href={"https://www.facebook.com/utxotech/"}
+                target="_blank"
+                className="cursor-pointer group"
+              >
+                <li className="text-2xl bg-white  group-hover:bg-[#1877F2]   h-8 w-8 p-[8px]  rounded-full">
+                  <FaFacebookF className="h-full w-full  text-gray-500  group-hover:text-white" />
+                </li>
+              </Link>
+              <Link
+                href={"https://x.com/utxotech"}
+                target="_blank"
+                className="cursor-pointer group"
+              >
+                <li className="text-2xl bg-white  group-hover:bg-[#000000]   h-8 w-8 p-[8px]  rounded-full">
+                  <FaXTwitter className="h-full w-full  text-gray-500  group-hover:text-white" />
+                </li>
+              </Link>
+              <Link
+                href={"https://www.linkedin.com/company/utxotech/"}
+                target="_blank"
+                className="cursor-pointer group"
+              >
+                <li className="text-2xl bg-white  group-hover:bg-[#1877F2]   h-8 w-8 p-[8px]  rounded-full">
+                  <FaLinkedinIn className="h-full w-full  text-gray-500  group-hover:text-white" />
+                </li>
+              </Link>
+              <Link
+                href={"https://www.instagram.com/utxotech/"}
+                target="_blank"
+                className="cursor-pointer group"
+              >
+                <li className="text-2xl bg-white group-hover:bg-gradient-to-tl group-hover:from-[#fdf497] group-hover:via-[#d6249f] group-hover:to-[#285AEB]   h-8 w-8 p-[8px]  rounded-full">
+                  <AiFillInstagram className="h-full w-full text-gray-500  group-hover:text-white" />
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
